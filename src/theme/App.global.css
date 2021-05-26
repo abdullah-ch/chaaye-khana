@@ -1,0 +1,26 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+body {
+    background: #ffffff;
+    /* background: tomato; */
+}
+
+h1,
+h3,
+h4,
+h5,
+h6,
+th,
+tr,
+td,
+p {
+    color: #383a3c !important;
+}
+
+svg,
+img {
+    color: #fff;
+}
