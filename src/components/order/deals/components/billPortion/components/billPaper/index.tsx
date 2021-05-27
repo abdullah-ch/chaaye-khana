@@ -1,12 +1,19 @@
 import React from 'react';
-import { makeStyles, Typography, Button } from '@material-ui/core';
+import {
+    makeStyles,
+    Typography,
+    Button,
+    Select,
+    MenuItem,
+    FormControl,
+} from '@material-ui/core';
 
 const styles = makeStyles((theme) => ({
     root: {},
     title: {
         display: 'flex',
         justifyContent: 'center',
-        marginTop: '40px',
+        marginTop: '10px',
     },
     menuItem: {
         width: '60%',
@@ -57,12 +64,59 @@ const styles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
     },
+    formControl: {
+        width: '80%',
+        '&::selection': {
+            border: ' 1px solid #66AFE9',
+        },
+
+        border: '1px solid black',
+        borderRadius: '10px',
+    },
+    textPosition: { paddingLeft: '10px' },
 }));
 // #E3E3E3 line break
 const BillPaper: React.FC = () => {
     const classes = styles();
+    const [age, setAge] = React.useState('');
+
+    const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+        setAge(event.target.value as string);
+    };
     return (
         <>
+            <div className={classes.title}>
+                <FormControl className={classes.formControl}>
+                    <Select
+                        // className={classes.selectText}
+
+                        value={age}
+                        onChange={handleChange}
+                        displayEmpty
+                        inputProps={{
+                            'aria-label': 'Without label',
+                        }}
+                    >
+                        <MenuItem value=''>
+                            <Typography
+                                variant='subtitle2'
+                                className={classes.textPosition}
+                            >
+                                Delivery
+                            </Typography>
+                        </MenuItem>
+
+                        <MenuItem value={20}>
+                            <Typography
+                                variant='subtitle2'
+                                className={classes.textPosition}
+                            >
+                                PickUp
+                            </Typography>
+                        </MenuItem>
+                    </Select>
+                </FormControl>{' '}
+            </div>
             <div className={classes.title}>
                 <Typography variant='h4'>Your Order</Typography>
             </div>

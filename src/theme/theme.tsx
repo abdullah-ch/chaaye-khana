@@ -55,6 +55,16 @@ const theme = createMuiTheme({
         },
     },
     overrides: {
+        MuiInput: {
+            underline: {
+                '&&&:before': {
+                    borderBottom: 'none',
+                },
+                '&&:after': {
+                    borderBottom: 'none',
+                },
+            },
+        },
         MuiDialog: {
             paper: {
                 backgroundColor: '#252525',
