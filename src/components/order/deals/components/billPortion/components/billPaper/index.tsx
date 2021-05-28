@@ -88,7 +88,13 @@ const BillPaper: React.FC = () => {
     };
     return (
         <>
-            <Scrollbars>
+            <Scrollbars
+                autoHide
+                // Hide delay in ms
+                autoHideTimeout={1000}
+                // Duration for hide animation in ms.
+                autoHideDuration={200}
+            >
                 <div className={classes.title}>
                     <FormControl className={classes.formControl}>
                         <Select
