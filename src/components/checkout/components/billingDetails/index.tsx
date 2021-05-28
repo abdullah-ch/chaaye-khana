@@ -1,15 +1,17 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
-const styles = makeStyles((theme) => ({
+const styles = makeStyles(() => ({
     root: {
-        background: 'red',
+        position: 'fixed',
+        width: '60%',
+        height: '100%',
     },
 }));
 
 const BillingDetails: React.FC = () => {
     const classes = styles();
-    return <div>Billing details</div>;
+    return <div className={classes.root}>Billing details</div>;
 };
 
 export default BillingDetails;

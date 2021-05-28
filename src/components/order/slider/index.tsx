@@ -1,8 +1,8 @@
 import React from 'react';
-import { makeStyles, Paper, Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import Carousel from 'react-material-ui-carousel';
 
-const styles = makeStyles((theme) => ({
+const styles = makeStyles(() => ({
     container: {
         width: 'inherit',
         height: '120px',

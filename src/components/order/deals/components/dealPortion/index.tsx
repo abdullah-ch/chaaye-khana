@@ -1,16 +1,9 @@
 import React from 'react';
 import { makeStyles, Grid } from '@material-ui/core';
-import DealCard from './dealCard';
-import ItemCard from './itemCard';
-import MenuItemCard from './menuItem';
+import DealCard from './components/dealCard';
+import MenuItemCard from './components/menuItem';
 
-const styles = makeStyles((theme) => ({
-    root: {
-        position: 'fixed',
-        width: '60%',
-        height: '100%',
-        backgroundColor: 'pink',
-    },
+const styles = makeStyles(() => ({
     container: {
         display: 'flex',
         flexDirection: 'column',
@@ -20,15 +13,27 @@ const styles = makeStyles((theme) => ({
 const DealPortion: React.FC = () => {
     const classes = styles();
     return (
-        <div className={classes.root}>
-            <Grid item container className={classes.container}>
-                <DealCard />
-                {/* <MenuItemCard /> */}
-                {/*  <ItemCard />
-                  <ItemCard />
-                <ItemCard /> */}
-            </Grid>
-        </div>
+        <Grid item container direction='column' className={classes.container}>
+            <DealCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+            <MenuItemCard />
+        </Grid>
     );
 };
 

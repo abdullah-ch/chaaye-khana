@@ -1,20 +1,30 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Grid } from '@material-ui/core';
 import BillingDetails from './components/billingDetails';
-import OrderDetails from './components/orderDetails';
 
-const styles = makeStyles((theme) => ({
+const styles = makeStyles(() => ({
     root: {
-        background: 'red',
+        // background: 'red',
+        position: 'fixed',
+        width: '85%',
+        height: '100%',
+        top: '20%',
+        right: '7%',
+        left: '7%',
+    },
+    position: {
+        display: 'flex',
+        flexDirection: 'row',
     },
 }));
 
 const Checkout: React.FC = () => {
     const classes = styles();
     return (
-        <div>
-            <BillingDetails />
-            <OrderDetails />
+        <div className={classes.root}>
+            <Grid className={classes.position}>
+                <BillingDetails />
+            </Grid>
         </div>
     );
 };

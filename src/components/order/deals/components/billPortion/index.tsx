@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import BillPaper from './components/billPaper';
 
-const styles = makeStyles((theme) => ({
+const styles = makeStyles(() => ({
     root: {
         position: 'fixed',
         width: '25%',

@@ -1,13 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
-import Slider from './slider';
+import { makeStyles, Grid } from '@material-ui/core';
+// import Slider from './slider';
 import Deals from './deals';
 
-const styles = makeStyles((theme) => ({
+const styles = makeStyles(() => ({
     root: {
         position: 'fixed',
         width: '85%',
-        height: '100%',
         top: '20%',
         right: '7%',
         left: '7%',
@@ -17,10 +16,10 @@ const styles = makeStyles((theme) => ({
 const Order: React.FC = () => {
     const classes = styles();
     return (
-        <div className={classes.root}>
-            <Slider />
+        <Grid className={classes.root}>
+            {/* <Slider /> */}
             <Deals />
-        </div>
+        </Grid>
     );
 };
 
