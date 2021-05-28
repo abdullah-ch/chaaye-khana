@@ -9,7 +9,7 @@ const styles = makeStyles((theme) => ({
         position: 'fixed',
         width: '60%',
         height: '100%',
-        backgroundColor: 'tomato',
+        backgroundColor: 'pink',
     },
     container: {
         display: 'flex',
@@ -22,9 +22,8 @@ const DealPortion: React.FC = () => {
     return (
         <div className={classes.root}>
             <Grid item container className={classes.container}>
-                {/* <DealCard />
-                <ItemCard /> */}
-                <MenuItemCard />
+                <DealCard />
+                {/* <MenuItemCard /> */}
                 {/*  <ItemCard />
                   <ItemCard />
                 <ItemCard /> */}

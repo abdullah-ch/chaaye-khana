@@ -5,11 +5,12 @@ import ItemCard from '../itemCard';
 
 const styles = makeStyles((theme) => ({
     root: {
-        display: 'flex',
-        justifyContent: 'center',
         width: '60%',
         position: 'fixed',
         height: '10%',
+        justifyContent: 'center',
+        display: 'flex',
+        alignItems: 'center',
     },
     bullet: {
         color: `${theme.palette.primary.dark} !important`,
