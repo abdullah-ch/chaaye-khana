@@ -5,6 +5,9 @@ const styles = makeStyles((theme) => ({
     root: {
         background: 'red',
     },
+    textStyle: {
+        fontFamily: 'Comfortaa',
+    },
 }));
 
 const dummy: React.FC = () => {
