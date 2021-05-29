@@ -39,7 +39,7 @@ const theme = createMuiTheme({
         },
         h5: { fontSize: '1em', color: 'black' },
         h6: {
-            fontSize: '1.1em',
+            fontSize: '16px',
             color: '#3a3a3a !important',
             fontFamily: 'Comfortaa Times New Roman',
         },
