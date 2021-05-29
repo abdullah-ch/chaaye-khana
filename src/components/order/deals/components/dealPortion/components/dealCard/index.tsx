@@ -4,7 +4,7 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 const styles = makeStyles((theme) => ({
     root: {
-        width: '70%',
+        width: '100%',
         minHeight: '70px',
         justifyContent: 'center',
         alignItems: 'center',

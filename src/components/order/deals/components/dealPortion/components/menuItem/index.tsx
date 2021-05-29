@@ -6,7 +6,7 @@ const styles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexDirection: 'row',
-        width: '70%',
+        width: '100%',
         minHeight: '70px',
         justifyContent: 'space-between',
         '&:hover': {

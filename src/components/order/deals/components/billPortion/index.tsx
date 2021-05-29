@@ -6,7 +6,7 @@ const styles = makeStyles(() => ({
     root: {
         position: 'fixed',
         width: '25%',
-        height: '50%',
+        height: '60%',
         right: '8%',
     },
 }));

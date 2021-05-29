@@ -26,3 +26,8 @@ img {
 }
 html {
 }
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: local('Comfortaa'), url(../fonts/Comfortaa-VariableFont_wght.ttf);
+}

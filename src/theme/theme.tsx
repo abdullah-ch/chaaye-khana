@@ -35,18 +35,18 @@ const theme = createMuiTheme({
         h3: {
             fontSize: '18px',
             color: '#3a3a3a !important',
-            fontFamily: 'Comforta Times New Roman',
+            fontFamily: 'Comfortaa Times New Roman',
         },
         h5: { fontSize: '1em', color: 'black' },
         h6: {
             fontSize: '1.1em',
             color: '#3a3a3a !important',
-            fontFamily: 'Comforta Times New Roman',
+            fontFamily: 'Comfortaa Times New Roman',
         },
         h4: {
             fontSize: '21px',
             color: '#3a3a3a !important',
-            fontFamily: 'Comforta Times New Roman',
+            fontFamily: 'Comfortaa Times New Roman',
         },
         subtitle1: {
             fontSize: '20px',
@@ -56,7 +56,7 @@ const theme = createMuiTheme({
         subtitle2: {
             fontSize: '15px',
             color: '#666666 !important',
-            fontFamily: 'Comforta display',
+            fontFamily: 'Comfortaa display',
         },
     },
     overrides: {

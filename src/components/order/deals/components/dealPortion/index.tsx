@@ -7,6 +7,8 @@ const styles = makeStyles(() => ({
     container: {
         display: 'flex',
         flexDirection: 'column',
+        boxShadow: '0 3px 16px 0 rgba(0,0,0,0.15) !important',
+        width: '70%',
     },
 }));
 

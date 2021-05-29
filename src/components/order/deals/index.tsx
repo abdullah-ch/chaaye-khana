@@ -14,7 +14,7 @@ const styles = makeStyles(() => ({
 const Deals: React.FC = () => {
     const classes = styles();
     return (
-        <Grid item container className={classes.root}>
+        <Grid item container direction='column' className={classes.root}>
             <DealPortion />
             <BillPortion />
         </Grid>
