@@ -8,6 +8,7 @@ const styles = makeStyles(() => ({
         position: 'fixed',
         width: '85%',
         top: 'calc(20% + 120px)',
+        // marginTop: '5%',
     },
 }));
 
