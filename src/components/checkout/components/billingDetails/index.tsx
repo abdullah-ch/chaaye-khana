@@ -1,5 +1,12 @@
 import React from 'react';
-import { makeStyles, Typography, TextField, Button } from '@material-ui/core';
+import {
+    makeStyles,
+    Typography,
+    TextField,
+    Button,
+    FormControl,
+    NativeSelect,
+} from '@material-ui/core';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -63,6 +70,17 @@ const styles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
     },
+
+    dropDownSelector: {
+        display: 'flex',
+        width: '100%',
+        border: '1px solid #E3E3E3',
+        fontFamily: 'Comfortaa',
+        fontSize: '15px',
+    },
+    optionDropdown: {
+        paddingLeft: '10px',
+    },
 }));
 const validationSchema = yup.object({
     firstName: yup
@@ -89,6 +107,10 @@ const validationSchema = yup.object({
 });
 const BillingDetails: React.FC = () => {
     const classes = styles();
+    const [age, setAge] = React.useState('');
+    const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+        setAge(event.target.value as string);
+    };
 
     const formik = useFormik({
         initialValues: {
@@ -102,9 +124,17 @@ const BillingDetails: React.FC = () => {
         validationSchema: validationSchema,
         onSubmit: (values) => {
             // set values here setProducts
-            console.log(values);
+            console.log(values, age);
         },
     });
+
+    const areaArray = [
+        'Johar Town',
+        'Iqbal Town',
+        'Wapda Town Phase I',
+        'Wapda Town Phase II',
+    ];
+
     return (
         <Scrollbars
             autoHide
@@ -223,6 +253,36 @@ const BillingDetails: React.FC = () => {
                             inputProps={{ className: classes.typedFont }}
                         />
                     </div>
+                    {/* Area */}
+                    <div className={classes.spacingName}>
+                        <Typography
+                            variant='h6'
+                            classes={{ root: classes.text }}
+                        >
+                            <b>Area</b>
+                        </Typography>
+                        <FormControl className={classes.dropDownSelector}>
+                            <NativeSelect
+                                required
+                                className={classes.dropDownSelector}
+                                value={age}
+                                name='age'
+                                onChange={handleChange}
+                                inputProps={{ 'aria-label': 'age' }}
+                            >
+                                <option value='' disabled>
+                                    Select Option
+                                </option>
+                                {areaArray.map((area, i) => {
+                                    return (
+                                        <option key={i} value={area}>
+                                            {area}
+                                        </option>
+                                    );
+                                })}
+                            </NativeSelect>
+                        </FormControl>
+                    </div>
                     {/* Phone */}
                     <div className={classes.spacingName}>
                         <Typography
@@ -260,8 +320,8 @@ const BillingDetails: React.FC = () => {
                         </Typography>
                         <TextField
                             required
-                            id='phoneNumber'
-                            name='phoneNumber'
+                            id='email'
+                            name='email'
                             onChange={formik.handleChange}
                             error={
                                 formik.touched.email &&
