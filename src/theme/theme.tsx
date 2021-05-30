@@ -60,6 +60,11 @@ const theme = createMuiTheme({
         },
     },
     overrides: {
+        MuiTab: {
+            root: {
+                fontFamily: 'Comfortaa',
+            },
+        },
         MuiInput: {
             underline: {
                 '&&&:before': {

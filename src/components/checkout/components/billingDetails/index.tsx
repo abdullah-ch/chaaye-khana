@@ -14,7 +14,7 @@ import * as yup from 'yup';
 const styles = makeStyles((theme) => ({
     root: {
         position: 'fixed',
-        width: '40%',
+        width: '42%',
         height: '80%',
     },
     textStyle: {
@@ -80,7 +80,9 @@ const styles = makeStyles((theme) => ({
     },
     optionDropdown: {
         paddingLeft: '10px',
+        width: '42%',
     },
+    scrollBars: {},
 }));
 const validationSchema = yup.object({
     firstName: yup
@@ -143,6 +145,7 @@ const BillingDetails: React.FC = () => {
                 autoHideTimeout={1000}
                 // Duration for hide animation in ms.
                 autoHideDuration={200}
+                className={classes.scrollBars}
             >
                 <Typography variant='h3' classes={{ root: classes.textStyle }}>
                     Billing Details

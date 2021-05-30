@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, Grid } from '@material-ui/core';
 import DealCard from './components/dealCard';
 import MenuItemCard from './components/menuItem';
+// import { Scrollbars } from 'react-custom-scrollbars';
 
 const styles = makeStyles(() => ({
     container: {
@@ -9,18 +10,7 @@ const styles = makeStyles(() => ({
         flexDirection: 'column',
         boxShadow: '0 3px 16px 0 rgba(0,0,0,0.15) !important',
         width: '70%',
-        // '@global': {
-        //     '*::-webkit-scrollbar': {
-        //         width: '5px',
-        //         height: '10px ',
-        //     },
-        //     '*::-webkit-scrollbar-thumb': {
-        //         backgroundColor: 'red',
-        //     },
-        //     '*::-webkit-scrollbar-track-piece': {
-        //         backgroundColor: 'black',
-        //     },
-        // },
+        minHeight: '90%',
     },
 }));
 
@@ -38,9 +28,28 @@ const DealPortion: React.FC = () => {
         menuItem('DD Beef Burger', 950),
         menuItem('McChicken Crispy', 1000),
         menuItem('Chowmein', 500),
+        menuItem('DD Beef Burger', 950),
+        menuItem('McChicken Crispy', 1000),
+        menuItem('Chowmein', 500),
+        menuItem('DD Beef Burger', 950),
+        menuItem('McChicken Crispy', 1000),
+        menuItem('Chowmein', 500),
+        menuItem('DD Beef Burger', 950),
+        menuItem('McChicken Crispy', 1000),
+        menuItem('Chowmein', 500),
+        menuItem('DD Beef Burger', 950),
+        menuItem('McChicken Crispy', 1000),
+        menuItem('Chowmein', 500),
     ];
     return (
         <Grid item container direction='column' className={classes.container}>
+            {/* <Scrollbars
+                autoHide
+                // Hide delay in ms
+                autoHideTimeout={1000}
+                // Duration for hide animation in ms.
+                autoHideDuration={200}
+            > */}
             <DealCard />
             {data.map((item, i) => {
                 return (
@@ -50,6 +59,7 @@ const DealPortion: React.FC = () => {
                     />
                 );
             })}
+            {/* </Scrollbars> */}
         </Grid>
     );
 };
