@@ -15,7 +15,7 @@ const styles = makeStyles((theme) => ({
     root: {
         position: 'fixed',
         width: '40%',
-        height: '100%',
+        height: '80%',
     },
     textStyle: {
         fontFamily: 'Comfortaa',
@@ -136,14 +136,14 @@ const BillingDetails: React.FC = () => {
     ];
 
     return (
-        <Scrollbars
-            autoHide
-            // Hide delay in ms
-            autoHideTimeout={1000}
-            // Duration for hide animation in ms.
-            autoHideDuration={200}
-        >
-            <div className={classes.root}>
+        <div className={classes.root}>
+            <Scrollbars
+                autoHide
+                // Hide delay in ms
+                autoHideTimeout={1000}
+                // Duration for hide animation in ms.
+                autoHideDuration={200}
+            >
                 <Typography variant='h3' classes={{ root: classes.textStyle }}>
                     Billing Details
                 </Typography>
@@ -342,8 +342,8 @@ const BillingDetails: React.FC = () => {
                         </Button>
                     </div>
                 </form>
-            </div>
-        </Scrollbars>
+            </Scrollbars>
+        </div>
     );
 };
 
